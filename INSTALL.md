@@ -1,43 +1,50 @@
-# Installation Guide
+````markdown
+# Installation
 
-## Requirements
+To build and run **Bcrush + BX12**, follow these steps:
 
-Before installing **Bcrush + BX12**, make sure you have the following installed:
+## Prerequisites
 
-- **Rust (Stable)**  
-  Install via official script:  
-  ```bash
-  curl https://sh.rustup.rs -sSf | sh
-  rustup default stable
-Cargo (comes with Rust)
+- **Rust** (latest stable version recommended)  
+  Install from: https://rustup.rs
 
-A Unix-like shell (e.g. Bash, Zsh, or Git Bash on Windows)
+- **Python 3.10+** (for auxiliary tools or testing, if needed)  
+  Install from: https://www.python.org/
 
-Windows users: You can use WSL, Git Bash, or a terminal in VS Code.
+## Build Steps
 
-Build Instructions
-Clone the repository:
+1. Clone the repository:
 
-git clone https://github.com/yourusername/bcrush.git
-cd bcrush
-Build the project:
+```bash
+git clone https://github.com/8BiTentertaiment/bx12.git
+cd bx12
+````
 
+2. Build the project using Cargo:
+
+```bash
 cargo build --release
-Run the project:
+```
 
-cargo run
-Optional (for BX12 compatibility layer)
-BX12 integration is under development.
+The compiled binaries will appear in the `target/release/` directory.
 
-In the future, you’ll be able to compile and use the DX12 wrapper via:
+## Run
 
-cargo build -p bx12_wrapper
-Notes
-This is a console-rendered graphical engine using ASCII output.
+Once built, run the executable:
 
-Performance and visual accuracy may depend on terminal configuration.
+```bash
+./target/release/bcrush
+```
 
-Contributions are welcome — see CONTRIBUTING.md (optional file).
+Or, if BX12 wrapper is ready:
 
-© 2025 8BiT_entertainment
-Licensed under MPL-2.0
+```bash
+./target/release/bx12
+```
+
+## Notes
+
+* ASCII rendering is terminal-based. Use a console that supports UTF-8 and ANSI colors.
+* Windows users: Prefer **Windows Terminal** or **cmder**.
+* Linux/macOS: any modern terminal should work.
+* This project is under active development. Features may change.

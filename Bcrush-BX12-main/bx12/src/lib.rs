@@ -20,3 +20,20 @@ impl BX12Wrapper {
         // Translation logic here
     }
 }
+
+// ================================
+// DX12 API EXPORT (for Windows DLL)
+// ================================
+
+#[no_mangle]
+pub extern "stdcall" fn D3D12CreateDevice(
+    _adapter: *mut std::ffi::c_void,
+    _minimum_feature_level: u32,
+    _riid: *const std::ffi::c_void,
+    _pp_device: *mut *mut std::ffi::c_void,
+) -> u32 {
+    println!("[BX12] D3D12CreateDevice called!");
+    // В будущем: использовать BX12Wrapper и вызывать translate_dx12_calls()
+
+    0 // S_OK
+}

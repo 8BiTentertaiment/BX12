@@ -1,8 +1,0 @@
-[workspace]
-members = [
-    "bcrush",
-    "bx12"
-]
-
-[profile.release]
-opt-level = 3

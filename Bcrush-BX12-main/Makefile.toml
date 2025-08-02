@@ -1,0 +1,11 @@
+[tasks.build-all]
+description = "Build both Bcrush and BX12"
+script = [
+    "echo Building Bcrush...",
+    "cd bcrush",
+    "cargo build",
+    "cd ..",
+    "echo Building BX12...",
+    "cd bx12",
+    "cargo build",
+]

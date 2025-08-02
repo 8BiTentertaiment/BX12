@@ -1,0 +1,1 @@
+D:\Bcrush-BX12-main\target\debug\libbcrush.rlib: D:\Bcrush-BX12-main\bcrush\src\command_queue.rs D:\Bcrush-BX12-main\bcrush\src\descriptor_heap.rs D:\Bcrush-BX12-main\bcrush\src\lib.rs D:\Bcrush-BX12-main\bcrush\src\resource.rs D:\Bcrush-BX12-main\bcrush\src\shader.rs D:\Bcrush-BX12-main\bcrush\src\utils.rs

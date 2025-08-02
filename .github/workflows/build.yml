@@ -1,0 +1,30 @@
+name: Build BX12 DLL
+
+on:
+  push:
+    branches: [main, feature/dx12-wrapper]
+  pull_request:
+    branches: [main, feature/dx12-wrapper]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+
+      - name: Build DLL
+        working-directory: ./bx12
+        run: cargo build --release
+
+      - name: Upload DLL Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: bx12-dll
+          path: bx12/target/release/*.dll
